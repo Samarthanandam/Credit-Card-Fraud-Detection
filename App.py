@@ -92,7 +92,7 @@ else:
     st.write('Awaiting CSV file to be uploaded.')
     st.write(input_df)
 
-load_clf = joblib.load(open('savedModels/model.joblib', 'rb'))
+load_clf = joblib.load(open('model.joblib', 'rb'))
 
 prediction = load_clf.predict(input_df)
 prediction_probability = load_clf.predict_proba(input_df)
